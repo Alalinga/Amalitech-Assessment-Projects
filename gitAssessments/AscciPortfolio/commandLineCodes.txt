@@ -1,0 +1,25 @@
+$ git checkout HEAD portrait.txt
+
+$ git add portrait.txt
+
+$ git commit -m "reversed to the old portraitand then added eyes"
+[master d414f19] reversed to the old portraitand then added eyes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git add house.txt tree.txt portrait.txt
+
+$ git commit -m "I changed date of each file"[master b261cd4] I changed date of each file
+ 3 files changed, 19 insertions(+), 2 deletions(-)
+ create mode 100644 house.txt
+
+$ git add .
+
+$ git reset HEAD house.txt
+Unstaged changes after reset:
+M       house.txt
+
+$ git commit -m "I added author name to each file"
+[master e2ae1df] I added author name to each file
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+$ 

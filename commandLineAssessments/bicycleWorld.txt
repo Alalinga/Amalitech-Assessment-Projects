@@ -1,0 +1,81 @@
+//1. Print the working directory
+
+$ pwd
+/home/ccuser/workspace/bicycle-world-ii
+
+//2. List the files and directore
+	
+$ ls
+brands.txt  freight  mountain  racing
+
+//3.Change directories to the freight/ directory.
+
+$ cd freight
+
+
+//4.List the files and directories in the working directory.
+
+$ ls
+messenger  porteur
+
+//5.Change directories to the porteur/ directory.
+ 
+$ cd porteur
+
+
+//6.Change directories up two levels to the bicycle-world-ii/ directory.
+
+$ cd ../..
+
+//List the files and directories in the bicycle-world-ii/ directory.
+$ ls
+brands.txt  freight  mountain  racing
+
+
+
+//7.Change directories to the mountain/downhill/ directory.
+
+$ cd mountain/downhill
+
+//8.Make a file called dirt.txt.
+
+$ touch dirt.txt
+
+//9.Make a file called mud.txt.
+
+$ touch mud.txt
+
+
+//10.List the files and directories in the downhill/ directory.
+  
+$ ls
+dirt.txt  heavyweight  lightweight  mud.txt
+
+//11.Downhill biking is dangerous: In the downhill/ directory, make a directory called safety/.
+
+$ mkdir safety
+$ ls
+dirt.txt  heavyweight  lightweight  mud.txt  safety
+
+//12.Change directories to the bicycle-world-ii/ directory.
+
+$ ../..
+
+//13.List the contents of the bicycle-world-ii/ directory.
+
+$ ls
+brands.txt  freight  mountain  racing
+
+//14.The shop is adding a new type of bike!In bicycle-world-ii/, make a directory called bmx/.
+
+$ mkdir bmx
+
+
+//15.Without changing directories from bicycle-world-ii/, make a file in the bmx/ directory called tricks.txt.
+
+$ touch bmx/tricks.txt
+
+//16.List all files and directories in the current directory.
+
+$ ls
+bmx  brands.txt  freight  mountain  racing

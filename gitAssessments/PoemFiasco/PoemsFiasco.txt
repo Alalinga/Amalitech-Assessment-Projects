@@ -1,0 +1,52 @@
+
+$ git checkout HEAD road-not-taken.txt
+
+$ git diff oven-bird.txt
+diff --git a/oven-bird.txt b/oven-bird.txt
+index 7e78f81..5749a6b 100644
+--- a/oven-bird.txt
++++ b/oven-bird.txt
+@@ -1,15 +1,13 @@
+-Oven Bird, by Robert Frost
++The Annoying Bird, by Robyn Lost
+ 
+-There is a singer everyone has heard,
+-Loud, a mid-summer and a mid-wood bird,
+-Who makes the solid tree trunks sound again.
+-He says that leaves are old and that for flowers
+-Mid-summer is to spring as one to ten.
+-He says the early petal-fall is past
+-When pear and cherry bloom went down in show
+
+$ git checkout -- oven-bird.txt
+
+$ git diff
+diff --git a/oven-bird.txt b/oven-bird.txt
+index 7e78f81..110de5b 100644
+--- a/oven-bird.txt
++++ b/oven-bird.txt
+@@ -1,15 +1,14 @@
+-Oven Bird, by Robert Frost
++The Annoying Bird, by Robyn Lost
+ 
+-There is a singer everyone has heard,
+-Loud, a mid-summer and a mid-wood bird,
+-Who makes the solid tree trunks sound again.
+-He says that leaves are old and that for flowers
+-Mid-summer is to spring as one to ten.
+-He says the early petal-fall is past
+-When pear and cherry bloom went down in show$ git add oven-bird.txt fire-and-ice.txt road-not-taken.txt
+
+$ $ git add oven-birds.txt fire-and-ice.txt road-not-taken.txt
+fatal: pathspec 'oven-birds.txt' did not match any files
+
+$ git add oven-bird.txt fire-and-ice.txt road-not-taken.txt
+
+$ git commit -m "I have made few changes"
+[master ca42db9] I have made few changes
+ 3 files changed, 20 insertions(+), 15 deletions(-)
+ rewrite oven-bird.txt (99%)
+
+$ git checkout HEAD oven-bird.txt fire-and-ice.txt road-not-taken.txt
+$ 
+
