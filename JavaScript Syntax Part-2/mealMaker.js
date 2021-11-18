@@ -7,15 +7,9 @@ const menu={
    set appetizer(appetizer){},
    set mains(mains){},
    set desserts(desserts){},
-   get appetizer(){
-     return this.appetizer
-   },
-   get mains(){
-     return this.mains
-   },
-   get desserts(){
-     return this.desserts
-   },
+   get appetizer(){},
+   get mains(){},
+   get desserts(){},
 get courses(){
   return {
     appetizers:this.appetizer,
