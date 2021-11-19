@@ -30,12 +30,12 @@ const calculateCard = (arr) => {
     let counter = 1
     for (let i = arr.length - 1; i >= 0; i--) {
         if (counter % 2 === 0) {
-            let doubledNumber = arr[i] * 2
-            if (doubledNumber > 9) {
-                doubledNumber -= 9
-                newArray.push(doubledNumber)
+            let everySecondNumber = arr[i] * 2
+            if (everySecondNumber > 9) {
+                everySecondNumber -= 9
+                newArray.push(everySecondNumber)
             } else {
-                newArray.push(doubledNumber)
+                newArray.push(everySecondNumber)
             }
         } else {
             newArray.push(arr[i])
