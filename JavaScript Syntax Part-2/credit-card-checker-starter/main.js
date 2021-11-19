@@ -25,7 +25,90 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 
+const calculateCard = (arr) => {
+    let newArray = [];
+    let counter = 1
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (counter % 2 === 0) {
+            let doubledNumber = arr[i] * 2
+            if (doubledNumber > 9) {
+                doubledNumber -= 9
+                newArray.push(doubledNumber)
+            } else {
+                newArray.push(doubledNumber)
+            }
+        } else {
+            newArray.push(arr[i])
+        }
+        counter++
+    }
+    return newArray;
+}
 
+const validateCred = (arr) => {
+    let numberArray = []
+    if (typeof arr !== 'object') {
+        arr.toString()
+        for (me of arr.toString()) {
+            numberArray.push(parseInt(me))
+        }
+
+    } else {
+        numberArray = arr
+    }
+
+    const results = () => calculateCard(numberArray).reduce((first, second) => first + second) % 10 === 0 ? true : false;      //'Valid Card' : 'Invalid Card'
+    return results()
+}
+
+const findInvalidCards = nestedArray => {
+    let invalidCards = []
+    for (let i = 0; i < nestedArray.length; i++) {
+        if (!validateCred(nestedArray[i])) {
+            invalidCards.push(nestedArray[i])
+        }
+    }
+    return invalidCards
+}
+
+const idInvalidCardCompanies = arr => {
+    let invalidCardsCampanies = []
+    for (let i = 0; i < findInvalidCards(arr).length; i++) {
+
+        switch (findInvalidCards(arr)[i][0]) {
+            case 3:
+                invalidCardsCampanies.push('Amex (American Express)')
+                break
+            case 4:
+                invalidCardsCampanies.push('Visa')
+                break
+            case 5:
+                invalidCardsCampanies.push('Mastercard')
+                break
+
+            case 6:
+                invalidCardsCampanies.push('Discover')
+                break
+
+            default:
+                console.log(`Company not found for ${findInvalidCards(arr)[i]}`)
+                break
+
+
+        }
+    }
+    return invalidCardsCampanies = new Set(invalidCardsCampanies);
+}
+
+
+
+
+console.log(idInvalidCardCompanies(batch))
+console.log(validateCred('4063113525108939'))
+console.log(validateCred(mystery2))
+console.log(validateCred(mystery3))
+console.log(validateCred(mystery4))
+console.log(validateCred(mystery5))
 
 
 
