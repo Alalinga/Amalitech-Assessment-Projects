@@ -1,0 +1,42 @@
+
+body{
+   border: 2px red solid;
+   padding:4px;
+}
+
+.title{
+  background-image: url("images/pattern.webp")
+}
+
+.title p{
+ font-family: Helvetica;
+ font-size: 100px;
+ font-weight: bold;
+ color:  khaki;
+ text-align: center;
+
+}
+
+.money{
+  font-family: Helvetica;
+  font-weight: bold;
+  color: blue;
+}
+h1{
+  font-family: Helvetica;
+ font-size: 32px;
+ font-weight: bold;
+ color:  white;
+}
+#brushes{
+ background-color: mediumspringgreen;
+}
+
+#frames{
+
+ background-color: lightcoral;
+}
+
+#paint{
+ background-color: skyblue;
+}
