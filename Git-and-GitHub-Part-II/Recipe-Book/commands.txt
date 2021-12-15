@@ -1,0 +1,13 @@
+$ cd veggie-favorites
+$ veggie-clone  veggie-favorites
+$ cd veggie-favorites
+$ pwd
+/home/ccuser/workspace/recipe-book-a/veggie-favorites
+$ git add chili.txt
+$ git add squash-lasagna.txt
+$ git commit "made few changes to chili and squash-lasagna"
+error: pathspec 'made few changes to chili and squash-lasagna' did not match any file(s) known to git.
+$ git commit -m "made few changes to chili and squash-lasagna"
+[master 9832a5d] made few changes to chili and squash-lasagna
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+$ 

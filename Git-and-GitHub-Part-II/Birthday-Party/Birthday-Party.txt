@@ -1,0 +1,83 @@
+
+//checking the number of branches in the repository
+$ git branch
+* master
+  moma
+  whitney
+
+//deleting branches from the repository
+
+$ git branch -d moma
+error: The branch 'moma' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D moma'.
+$ git branch -D moma
+Deleted branch moma (was 978e5a1).
+$ git branch -D whitney
+Deleted branch whitney (was 9b384f9).
+
+//creating a branch (unordered-list branch)
+
+$ git branch unordered-list
+$ git branch 
+* master
+  unordered-list
+
+// changing to another branch (unordered-list branch)
+
+$ git checkout unordered-list
+M       index.html
+Switched to branch 'unordered-list'
+$ git branch
+  master
+* unordered-list
+
+// staging a file to a branch
+
+$ git add index.html
+
+// commiting a file to a branch
+
+$ git commit -m "changing index content"
+[unordered-list 975e586] changing index content
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+$ git checkout master
+Switched to branch 'master'
+
+// merging a working branch to master branch
+
+$ git merge unordered-list
+Updating 1481f5a..975e586
+Fast-forward
+ index.html | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+//creating a new working branch (big-heading)
+
+$ git branch big-heading
+//switching to a working branch (big-heading)
+
+$ git checkout big-heading
+Switched to branch 'big-heading'
+
+// staging index.html content chnaged content to the working branch (big-heading)
+$ git add index.html
+
+// staging index.html content chnaged content to the working branch (big-heading)
+
+$ git commit -m "making to changes to big-heading branch"
+[big-heading d1a3b70] making to changes to big-heading branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+//switching to master branch
+
+$ git checkout master
+Switched to branch 'master'
+
+//merging the working branch(big-heading) to the master branch 
+
+$ git merge big-heading
+Updating 975e586..d1a3b70
+Fast-forward
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ 

@@ -1,0 +1,57 @@
+
+//cloning maryrose to local javascriptHomework
+
+$ git clone maryrose-hw javascriptHomework
+Cloning into 'javascriptHomework'...
+done.
+$ ls
+javascriptHomework  maryrose-hw
+
+$ cd javascriptHomework
+
+//creating a new branch for the homework task
+$ git branch homework
+$ git checkout homework
+Switched to branch 'homework'
+
+//staging te changes made to the homework
+
+$ git add homework.js
+$ git commit -m "added comments to the code"
+[homework ea39688] added comments to the code
+ 1 file changed, 4 insertions(+)
+
+//pushing the working branch(homework) to the origin
+
+$ git push origin homework
+Counting objects: 3, done.
+Delta compression using up to 16 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 316 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To /home/ccuser/workspace/js-homework/maryrose-hw
+ * [new branch]      homework -> homework
+$ cd ../marry-hw
+bash: cd: ../marry-hw: No such file or directory
+$ cd ../marryrose-hw
+bash: cd: ../marryrose-hw: No such file or directory
+$ cd ../maryrose-hw
+
+//logging
+$ git log
+commit f6f5b1a0298d9ac0c257ebea665e56a7effc1557
+Author: danasselin <johndoe@example.com>
+Date:   Thu Nov 19 16:30:26 2015 -0500
+
+    Finish my homework
+
+commit 04107e57402323d48bbd2e1692a3ba04940dd89e
+Author: danasselin <johndoe@example.com>
+Date:   Thu Nov 19 16:23:15 2015 -0500
+
+    Write if/else statement
+
+commit d8570f2181b57e94cacc8021dbc0a917897f2efe
+Author: danasselin <johndoe@example.com>
+Date:   Thu Nov 19 16:18:08 2015 -0500
+$ 

@@ -1,0 +1,20 @@
+//merging edits branch to master branch to invoke merge conflict
+
+$ git merge edits
+Auto-merging examples.md
+CONFLICT (content): Merge conflict in examples.md
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+$ 
+//staging and commiting after merging conflict resolved
+$ git add README.md
+
+$ git add examples.md
+$ git commit -m "Resolve merge conflict"
+[master a43b494] Resolve merge conflict
+
+//deleting edits branch after merging
+$ git branch -D edits
+Deleted branch edits (was 0dc9f6a).
+$ 
