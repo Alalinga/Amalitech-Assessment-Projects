@@ -1,0 +1,42 @@
+--Querying all data from startups table
+
+SELECT * FROM startups;
+
+--Querying the total data in startups table
+
+SELECT COUNT(*) FROM startups;
+
+--Querying sum of valuation inthe startups table
+
+SELECT SUM(valuation) FROM startups;
+
+--Querying maximum value
+
+SELECT MAX(raised) FROM startups;
+
+SELECT MAX(raised) FROM startups WHERE stage='Seed';
+
+--Querying minimum value
+SELECT MIN(founded) FROM startups;
+
+--Querying Average value
+
+SELECT AVG(valuation) FROM startups;
+
+SELECT category, AVG(valuation) FROM startups GROUP BY category;
+
+SELECT category, ROUND(AVG(valuation),2) FROM startups GROUP BY category;
+
+SELECT category, ROUND(AVG(valuation),2) FROM startups GROUP BY 1  ORDER BY 2 DESC;
+
+
+
+SELECT category, COUNT(*) FROM startups GROUP BY 1;
+
+SELECT category, COUNT(*) FROM startups GROUP BY 1 having count(*)>3;
+
+
+SELECT location, AVG(employees) FROM startups GROUP BY 1;
+
+SELECT location, AVG(employees) FROM startups GROUP BY location HAVING AVG(employees) >500;
+

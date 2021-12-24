@@ -1,0 +1,50 @@
+
+--Creating table named friends
+
+CREATE TABLE friends(
+id INTEGER,
+name TEXT,
+birthday DATE
+);
+
+--Inserting data into table (friends)
+
+INSERT INTO friends(id,name,birthday)
+VALUES(1,'Ororo Munroe','1940-05-30');
+
+INSERT INTO friends(id,name,birthday)
+VALUES(2,'peace maker','1999-11-01');
+
+INSERT INTO friends(id,name,birthday)
+VALUES(3,'Dedone moro','1990-01-12');
+
+INSERT INTO friends(id,name,birthday)
+VALUES(4,'Alalinga captain','2000-05-03');
+
+--Updating data from the table (friends)
+UPDATE friends SET name='Storm' WHERE id=1;
+
+--Altering/ Adding column to table
+ALTER TABLE friends ADD COLUMN email TEXT;
+
+--Updating data
+UPDATE friends
+SET email = 'storm@codecademy.com'
+WHERE id = 1;
+
+UPDATE friends
+SET email = 'peace@codecademy.com'
+WHERE id = 2;
+UPDATE friends
+SET email = 'dedone@codecademy.com'
+WHERE id = 3;
+UPDATE friends
+SET email = 'alalinga@codecademy.com'
+WHERE id = 4;
+
+--deleting data
+DELETE FROM friends WHERE id=1;
+
+SELECT * 
+FROM friends;
+
