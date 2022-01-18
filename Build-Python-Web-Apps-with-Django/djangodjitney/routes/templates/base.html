@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://www.codecademy.com/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'routes/style.css' %}"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{% block title %}Django Djitney{% endblock %}</title>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="header-first-row">
+          <img
+            src="{% static 'routes/djitney.png' %}"
+            alt="Django Djitney Logo"
+            width="80px"
+          />
+          <h1 class="title">Django Djitney</h1>
+        </div>
+        <nav class="navbar">
+          <a class="nav-item" href="{% url 'home' %}">Home</a>
+          <a class="nav-item" href="{% url 'lines' %}">Add Line</a>
+          <a class="nav-item" href="{% url 'stations' %}">Add Stations</a>
+         <a class="nav-item" href="{% url 'stops' %}">Add Stop</a>
+{% comment block %} <a class="nav-item" href="{% url 'lines' %}">Lines</a> {% endcomment %}
+{% comment %} <a class="nav-item" href="{% url 'stations' %}">Stations</a> {% endcomment %}
+{% comment %} <a class="nav-item" href="{% url 'stops' %}">Stops</a> {% endcomment %}
+        </nav>
+      </header>
+      <main>{% block content %}{% endblock %}</main>
+    </div>
+  </body>
+</html>
+
