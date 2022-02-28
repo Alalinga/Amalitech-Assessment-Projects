@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>File Metadata</title>
+      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="/css/style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+
+    <nav>
+      <ul>
+          <li><a href="/photos.html">Photos</a></li>
+          <li> <a href="/caption.html">Captions</a> </li>
+          <li> <a href="/logout"> logout</a> </li>
+      </ul>
+  </nav>
+      <div class="container">
+        <h2>API Project: File Metadata Microservice</h2>
+
+        <h3>Usage:</h3>
+        <p>
+          Please Upload a File ...
+        </p>
+        <div class="view">
+          <h4 id="output"></h4>
+          <form enctype="multipart/form-data" method="POST" action="/api/upload-Image">
+            <input id="captionimage" type="file" name="captionimage">
+            <input id="button" type="submit" value="Upload">
+          </form>
+        </div>
+      </div>
+      <div class="footer">
+        <p>
+          by 
+          <a href="http://www.freecodecamp.com">freeCodeCamp</a>
+        </p>
+      </div>
+   </body>
+</html>
